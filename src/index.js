@@ -16,15 +16,23 @@ const ReactDOM = require('react-dom/client');
 const { HashRouter } = require('react-router-dom');
 const i18n = require('i18next');
 const { initReactI18next } = require('react-i18next');
-const stremioTranslations = require('stremio-translations');
+const enUS = require('stremio-translations/en-US.json');
+const frFR = require('stremio-translations/fr-FR.json');
 const App = require('./App');
 const { default: WebUpdateScreen } = require('./App/WebUpdateScreen');
 const { CoreProvider } = require('./core');
 const { FileDropProvider, PlatformProvider } = require('./common');
 
-const translations = Object.fromEntries(Object.entries(stremioTranslations()).map(([key, value]) => [key, {
-    translation: value
-}]));
+const APP_NAME = 'Bizarreio';
+const applyAppName = (strings) => Object.fromEntries(Object.entries(strings).map(([key, text]) => [
+    key,
+    typeof text === 'string' ? text.replace(/Stremio/g, APP_NAME) : text
+]));
+
+const translations = {
+    'en-US': { translation: applyAppName(enUS) },
+    'fr-FR': { translation: applyAppName(frFR) }
+};
 
 i18n
     .use(initReactI18next)

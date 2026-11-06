@@ -1,6 +1,6 @@
 {
-    "name": "Stremio Web",
-    "short_name": "Stremio",
+    "name": "Bizarreio Web",
+    "short_name": "Bizarreio",
     "description": "Freedom To Stream",
     "background_color": "#0c0b11",
     "theme_color": "#2a2843",
@@ -71,14 +71,14 @@
             "sizes": "1440x900",
             "type": "image/webp",
             "form_factor": "wide",
-            "label": "Homescreen of Stremio"
+            "label": "Homescreen of Bizarreio"
         },
         {
             "src": "screenshots/board_narrow.webp",
             "sizes": "414x896",
             "type": "image/webp",
             "form_factor": "narrow",
-            "label": "Homescreen of Stremio"
+            "label": "Homescreen of Bizarreio"
         }
     ]
 }
